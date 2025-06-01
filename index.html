@@ -10,6 +10,7 @@
     .dropdown {
       position: relative;
       display: inline-block;
+      margin: 20px;
     }
 
     .dropbtn {
@@ -45,7 +46,19 @@
       display: block;
     }
 
-    .aboutbtn {
+    body {
+      background-color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .about-btn {
       background-color: gray;
       color: white;
       padding: 10px 20px;
@@ -53,17 +66,11 @@
       border: none;
       cursor: pointer;
     }
-
-    body {
-      background-color: white;
-    }
   </style>
 </head>
 <body>
 
-  <div style="display: flex; justify-content: space-between; align-items: center; margin: 20px;">
-    <button class="aboutbtn" onclick="location.href='about.html'">About</button>
-
+  <div class="nav-container">
     <div class="dropdown">
       <button class="dropbtn">Menu</button>
       <div class="dropdown-content">
@@ -73,6 +80,8 @@
         <a href="offcourt.html">Off-Court</a>
       </div>
     </div>
+
+    <button class="about-btn" onclick="location.href='about.html'">About</button>
   </div>
 
   <h1><b>LeBron James</b></h1>
