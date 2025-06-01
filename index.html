@@ -10,7 +10,6 @@
     .dropdown {
       position: relative;
       display: inline-block;
-      margin: 20px;
     }
 
     .dropbtn {
@@ -30,9 +29,6 @@
       box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
       z-index: 1;
     }
-    body{
-        background-color: white;;
-    }
 
     .dropdown-content a {
       color: black;
@@ -48,17 +44,34 @@
     .dropdown:hover .dropdown-content {
       display: block;
     }
+
+    .aboutbtn {
+      background-color: gray;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+
+    body {
+      background-color: white;
+    }
   </style>
 </head>
 <body>
- <button class="button" onclick="location.href='about.html'">About</button>
-  <div class="dropdown">
-    <button class="dropbtn">Menu</button>
-    <div class="dropdown-content">
-      <a href="career.html">NBA</a>
-      <a href="personal.html">Personal</a>
-      <a href="awards.html">Awards & Records</a>
-      <a href="offcourt.html">Off-Court</a>
+
+  <div style="display: flex; justify-content: space-between; align-items: center; margin: 20px;">
+    <button class="aboutbtn" onclick="location.href='about.html'">About</button>
+
+    <div class="dropdown">
+      <button class="dropbtn">Menu</button>
+      <div class="dropdown-content">
+        <a href="career.html">NBA</a>
+        <a href="personal.html">Personal</a>
+        <a href="awards.html">Awards & Records</a>
+        <a href="offcourt.html">Off-Court</a>
+      </div>
     </div>
   </div>
 
