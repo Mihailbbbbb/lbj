@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    h1 {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+      margin: 20px;
+    }
+
+    .dropbtn {
+      background-color: rgb(237, 3, 3);
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    body{
+        background-color: white;;
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="dropdown">
+    <button class="dropbtn">Menu</button>
+    <div class="dropdown-content">
+      <a href="career.html">NBA</a>
+      <a href="personal.html">Personal</a>
+      <a href="awards.html">Awards & Records</a>
+      <a href="offcourt.html">Off-Court</a>
+    </div>
+  </div>
+
+  <h1><b>LeBron James</b></h1>
+  <h2><b>Here are top 3 reasons why he is the GOAT</b></h2>
+  <ol>
+    <li>He has the most career points in history — over 40,000.</li>
+    <li>He's outperformed most players over the age of 40.</li>
+    <li>His son, Bronny, is in the NBA — the prince has arrived.</li>
+  </ol>
+
+  <p>
+    <img src="https://media.gq.com/photos/57058abd4cfa20ec099b093d/16:9/w_2560%2Cc_limit/lebron-james-underrated.jpg" width="500" style="margin-bottom: 30px;" />
+  </p>
+
+  <h2><a href="https://www.espn.com/nba/player/stats/_/id/1966/lebron-james">Tap to see more</a></h2>
+
+  <h2>When was LeBron Raymond James drafted</h2>
+  <input type="password" id="passwordInput" style="margin-bottom: 20px;">
+  <button onclick="checkPassword()">Submit</button>
+
+  <div id="secretContent" style="display: none; margin-top: 30px; margin-bottom: 40px;">
+    <a href="https://www.gettyimages.com/photos/lebron-james">Reward</a>
+  </div>
+
+  <script>
+    function checkPassword() {
+      var password = document.getElementById("passwordInput").value;
+      if (password === "2003") {
+        document.getElementById("secretContent").style.display = "block";
+      } else {
+        alert("Wrong password. Try again!");
+      }
+    }
+  </script>
+
+  <form>
+    <h2>Where is LeBron playing currently?</h2>
+    <input type="radio" name="LeBron" value="Miami"> Miami<br/>
+    <input type="radio" name="LeBron" value="Lakers"> Lakers<br/>
+    <input type="radio" name="LeBron" value="Nuggets"> Nuggets<br/>
+    <input type="radio" name="LeBron" value="Cleveland"> Cleveland<br/>
+
+    <button type="button" onclick="check()">Submit</button>
+    <button style="margin-left: 15px;" type="reset">Reset</button>
+    <p id="result"></p>
+  </form>
+
+  <script>
+    function check() {
+      const options = document.getElementsByName("LeBron");
+      let answer = '';
+      for (let option of options) {
+        if (option.checked) {
+          answer = option.value;
+          break;
+        }
+      }
+
+      document.getElementById('result').innerText =
+        answer === 'Lakers' ? 'Correct!' :
+        answer ? 'Wrong!' :
+        'Please choose an answer.';
+    }
+  </script>
+
+  <table border="3">
+    <tr>
+      <th>Years</th>
+      <th>Cleveland</th>
+      <th>Miami</th>
+      <th>Lakers</th>
+    </tr>
+    <tr>
+      <td>2003-2010</td>
+      <td>✅</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>2011-2014</td>
+      <td></td>
+      <td>✅</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>2015-2018</td>
+      <td>✅</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>2018–∞</td>
+      <td></td>
+      <td></td>
+      <td>✅</td>
+    </tr>
+  </table>
+
+  <h3>Other Reasons Why LeBron James is the GOAT</h3>
+  <ul>
+    <li>Over 40,000 career points scored</li>
+    <li>Still dominating the league into his 40s</li>
+    <li>Only player to lead all-time in points while also ranking top-5 in assists</li>
+  </ul>
+
+</body>
+</html>
